@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Anotador de Recetas</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Anotador de Recetas</h1>
+        <div id="recetas-container"></div>
+        <div id="formulario" class="hidden">
+            <h2>Agregar/Editar Recetas</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <label for="ingredientes">Ingredientes:</label>
+            <textarea id="ingredientes" required></textarea>
+            <label for="preparacion">Preparacion:</label>
+            <textarea id="preparacion" required></textarea>
+            <button id="guardarBtn" onclick="agregarReceta()">Guardar</button>
+            <button id="cancelarBtn" onclick="cancelarReceta()">Cancelar</button>
+        </div>
+
+        <div id="receta-aparte" class="hidden">
+            <div id="receta-aparte-container"></div>
+            <button id="cerrarRecetaBtn">Cerrar Receta</button>
+        </div>
+
+        <button id="agregarBtn" onclick="mostrarFormulario()">Agregar Receta</button>
+
+        <!-- Agrega el modal al HTML -->
+        <div id="receta-modal">
+            <div id="receta-modal-content"></div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
